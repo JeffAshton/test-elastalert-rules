@@ -22,6 +22,7 @@ slack_channel_override: "#elastalert-test"
 slack_emoji_override: ":fire:"
 
 kibana_discover_columns: [ 'message', 'request' ]
+kibana_discover_index_pattern_id: 90943e30-9a47-11e8-b64d-95841ca0b247
 
 alert_text: |+
   
