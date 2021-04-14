@@ -1,0 +1,35 @@
+
+name: Errors
+type: any
+index: kibana_sample_data_logs
+
+timestamp_field: "timestamp"
+timestamp_type: "custom"
+timestamp_format: "%Y-%m-%dT%H:%M:%S.%fZ"
+
+filter:
+- match:
+    tags:
+        query: error
+
+realert:
+  minutes: 1
+
+alert:
+- "slack"
+
+slack_channel_override: "#elastalert-test"
+slack_emoji_override: ":fire:"
+
+kibana_discover_columns: [ 'message', 'request' ]
+
+alert_text: |+
+  
+  Testing generated kibana discover links:
+  
+  {0}
+
+alert_text_args:
+  - "kibana_link"
+
+alert_text_type: alert_text_only
