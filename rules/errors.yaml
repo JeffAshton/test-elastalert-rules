@@ -33,3 +33,7 @@ alert_text_args:
   - "kibana_link"
 
 alert_text_type: alert_text_only
+
+match_enhancements:
+  - d2l.environment_enhancements.AppendDataCenter
+  - d2l.environment_enhancements.OnlyDevelopmentEnvironments
